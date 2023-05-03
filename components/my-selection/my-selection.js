@@ -1,9 +1,5 @@
 let pathName = new URL (import.meta.url).pathname;
 let name = pathName.split('/').pop().replace(".js","");
-console.log(name);
-console.log(pathName);
-
-
 
 export default class mySelection extends HTMLElement{
     static async components(){
