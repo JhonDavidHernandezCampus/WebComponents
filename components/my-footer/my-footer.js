@@ -1,6 +1,5 @@
 const puthName = new URL(import.meta.url).pathname;
 const name = puthName.split('/').pop().replace(".js","");
-console.log(name);
 export default class myFooter extends HTMLElement{
     static async components(){
         return await(await fetch (puthName.replace(".js",".html"))).text();

@@ -5,6 +5,7 @@ export default class mySelection extends HTMLElement{
     static async components(){
         return await (await fetch(pathName.replace(".js", ".html"))).text();
     }
+
     constructor(){
         super();
         this.attachShadow({mode: "open"});
@@ -12,6 +13,7 @@ export default class mySelection extends HTMLElement{
             this.shadowRoot.innerHTML = html;
         })
     }
+
 }
 
 customElements.define(name, mySelection);

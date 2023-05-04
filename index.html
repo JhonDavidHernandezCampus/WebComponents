@@ -41,9 +41,13 @@
         width: 98%;
         padding-bottom: 0px;
         padding-top: 0px;
-
     }
-
+    my-formu{
+        z-index: 2;
+        position:absolute;
+        top: 50%;
+        right: 50%;
+    }
 </style>
 
 
@@ -54,6 +58,7 @@
         </div>
         <div class="contenedor">
             <div class="conten">
+                <my-formu></my-formu>
                 <my-section></my-section>
                 <my-selection></my-selection>
             </div>
@@ -63,7 +68,8 @@
         </div>
         <footer class="footer">
             <my-footer></my-footer>
+            
         </footer>
-
+        
 </body>
 </html>
