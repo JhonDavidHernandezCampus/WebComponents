@@ -29,4 +29,3 @@ export default class myFormulario extends HTMLElement{
     }
 }
 customElements.define(name, myFormulario);
-console.log(name);

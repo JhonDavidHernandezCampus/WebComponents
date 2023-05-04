@@ -9,11 +9,23 @@ export default class mySelection extends HTMLElement{
     constructor(){
         super();
         this.attachShadow({mode: "open"});
+
+    }
+    handleEvent(e){
+        (e.type === "click")?this.enviarWorker(e):undefined;
+    }
+    enviarWorker(e){
+        e.preventDefault();
+        alert("se apromio el boton")
+    }
+    connectedCallback(){
         Promise.resolve(mySelection.components()).then(html=>{
             this.shadowRoot.innerHTML = html;
+            this.mySelection= this.shadowRoot.querySelector("#btn");
+            this.mySelection.addEventListener('click',                                                        
+            this.handleEvent.bind(this))
         })
     }
-
 }
 
 customElements.define(name, mySelection);
