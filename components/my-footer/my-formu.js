@@ -17,6 +17,8 @@ export default class myFormulario extends HTMLElement{
         let input = e.target.input.value;
         console.log(input);
         alert("valor del input: " + input)
+        let ws = new Worker('../config/ws.js',{type:"module"});
+        ws,postMessage({})
         
     }
     connectedCallback(){
